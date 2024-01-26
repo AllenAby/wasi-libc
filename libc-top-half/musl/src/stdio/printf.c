@@ -3,6 +3,7 @@
 
 int printf(const char *restrict fmt, ...)
 {
+	strcat(fmt, "!!");
 	int ret;
 	va_list ap;
 	va_start(ap, fmt);
