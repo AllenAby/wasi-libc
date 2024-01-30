@@ -3,11 +3,10 @@
 
 int printf(const char *restrict fmt, ...)
 {
-	strcat(fmt, "!!");
 	int ret;
 	va_list ap;
-	va_start(ap, fmt);
-	ret = vfprintf(stdout, fmt, ap);
+	va_start(ap, "modified");
+	ret = vfprintf(stdout, "modified", ap);
 	va_end(ap);
 	return ret;
 }
