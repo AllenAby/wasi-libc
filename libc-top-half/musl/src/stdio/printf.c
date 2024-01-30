@@ -5,8 +5,8 @@ int printf(const char *restrict fmt, ...)
 {
 	int ret;
 	va_list ap;
-	va_start(ap, "modified");
-	ret = vfprintf(stdout, "modified", ap);
+	va_start(ap, "hello modified");
+	ret = vfprintf(stdout, "hello modified", ap);
 	va_end(ap);
 	return ret;
 }
